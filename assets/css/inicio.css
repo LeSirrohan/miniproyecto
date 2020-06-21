@@ -1,0 +1,8 @@
+.m-dropdown.m-dropdown--align-center.m-dropdown--large .m-dropdown__wrapper {
+    width: 330px !important;
+    margin-left: -300px !important;
+}
+#m_amcharts_2 {
+    width: 100%;
+    height: 300px;
+}
