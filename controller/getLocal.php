@@ -1,15 +1,9 @@
 <?php 
 session_start();
-include("../class/conexion.php");
 include("../model/local.php");
 
 $result =[];
-$conexion = new Conexion();
-$conex = $conexion->getConexion();
-$result = $conex->query("SELECT * FROM local ");
+$local = new Local();
 $data = [];
-while($row = $result->fetch(PDO::FETCH_ASSOC))
-{
-    $data[] = $row;
-}
+$data = $local->getLocales();
 echo json_encode($data);

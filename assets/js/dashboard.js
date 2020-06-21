@@ -34,7 +34,7 @@ var Dashboard = function() {
             var data = generateChartData();
             drawChart(data);
         });
-        var local = "1";
+        var local = "2";
         var data = generateChartData(local);
         drawChart(data);
         function drawChart(data){

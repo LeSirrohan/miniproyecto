@@ -19,6 +19,8 @@ License: You must have a valid license purchased only from themeforest(the above
 		<meta name="description" content="Latest updates and statistic charts">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta http-equiv="Cache-control" content="public">
+
 		<!--begin::Web font -->
 		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
 		<script>
@@ -71,11 +73,11 @@ License: You must have a valid license purchased only from themeforest(the above
 													<span></span>
 												</label>
 											</div>
-											<div class="col m--align-right">
+											<!--<div class="col m--align-right">
 												<a href="javascript:;" id="m_login_forget_password" class="m-link">
 													Olvidó su contraseña ?
 												</a>
-											</div>
+											</div>-->
 										</div>
 										<div class="m-login__form-action">
 											<button id="m_login_signin_submit" class="btn btn-focus m-btn m-btn--pill m-btn--custom m-btn--air">
@@ -133,7 +135,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										</div>
 									</form>
 								</div>
-								<div class="m-login__forget-password">
+								<!--<div class="m-login__forget-password">
 									<div class="m-login__head">
 										<h3 class="m-login__title">
 											Olvidó su contraseña ?
@@ -155,7 +157,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											</button>
 										</div>
 									</form>
-								</div>
+								</div>-->
 							</div>
 						</div>
 						<div class="m-stack__item m-stack__item--center">

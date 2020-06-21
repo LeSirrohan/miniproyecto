@@ -1,6 +1,7 @@
 <?php 
 
-	class resumenDia{
+include("../class/conexion.php");
+	class resumenDia extends Conexion{
 
 		private $idLocal;
 		private $numeroDia;
@@ -45,5 +46,22 @@
 
 		public function setCantMesas(string $cantMesas){
 			$this->cantMesas = $cantMesas;
-		}
+        }
+        public function getResumenDia(int $idLocal){            
+            $conexion = new Conexion();
+            $conex = $conexion->getConexion();
+            $consulta = "SELECT DATE_FORMAT(dia,'%d-%m-%Y') dia_venta,monto,cantMesas from resumendia";
+            if($idLocal != ""){
+                $consulta .= " WHERE idLocal = '{$idLocal}'";
+            }
+            $consulta.= "  ORDER BY dia asc ";
+            $result = $conex->query("$consulta");
+
+            $data = [];
+            while($row = $result->fetch(PDO::FETCH_ASSOC))
+            {
+                $data[] = $row;
+            }
+            return $data;
+        }
 	}
