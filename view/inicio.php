@@ -3,7 +3,8 @@ header("Cache-Control: no-cache, must-revalidate"); //HTTP 1.1
 header("Pragma: no-cache"); //HTTP 1.0
 header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past
 
-header("Cache-Control: max-age=2592000");?>
+header("Cache-Control: max-age=2592000");
+?>
 <!DOCTYPE html>
 
 <html lang="en" >
@@ -18,7 +19,7 @@ header("Cache-Control: max-age=2592000");?>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="Cache-control" content="public">
 
-		<!--begin::Web font -->
+		<!--begin::Web font
 		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
 		<script>
           WebFont.load({
@@ -27,7 +28,7 @@ header("Cache-Control: max-age=2592000");?>
                 sessionStorage.fonts = true;
             }
           });
-		</script>
+		</script> -->
 		<!--end::Web font --> 
         <!--begin::Page Vendors -->
 		<link href="../assets/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />

@@ -1,3 +1,9 @@
+<?php session_start(); 
+header("Cache-Control: no-cache, must-revalidate"); //HTTP 1.1
+header("Pragma: no-cache"); //HTTP 1.0
+header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past
+
+header("Cache-Control: max-age=2592000");?>
 <!DOCTYPE html>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 4
@@ -21,7 +27,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta http-equiv="Cache-control" content="public">
 
-		<!--begin::Web font -->
+		<!--begin::Web font
 		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
 		<script>
           WebFont.load({
@@ -30,7 +36,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 sessionStorage.fonts = true;
             }
           });
-		</script>
+		</script> -->
 		<!--end::Web font -->
         <!--begin::Base Styles -->
 		<link href="../assets/css/vendors.bundle.css" rel="stylesheet" type="text/css" />
@@ -60,7 +66,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>
 									<form class="m-login__form m-form" action="">
 										<div class="form-group m-form__group">
-											<input class="form-control m-input" type="text" placeholder="Usuario" name="user" autocomplete="off">
+											<input class="form-control m-input" type="text" placeholder="Usuario o email" name="user" autocomplete="off">
 										</div>
 										<div class="form-group m-form__group">
 											<input class="form-control m-input m-login__form-input--last" type="password" placeholder="Contraseña" name="password">
@@ -103,7 +109,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											<input class="form-control m-input" type="text" placeholder="Apellido" name="Apellido">
 										</div>
 										<div class="form-group m-form__group">
-											<input class="form-control m-input" type="text" placeholder="Email" name="email" autocomplete="off">
+											<input class="form-control m-input" type="text" placeholder="Usuario o Email" name="email" autocomplete="off">
 										</div>
 										<div class="form-group m-form__group">
 											<input class="form-control m-input" type="password" placeholder="Password" name="password">
@@ -181,7 +187,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						<p class="m-login__msg">
 							Estaremos felices en poder ayudarte!
 							<br>
-							Eres nuestra principal preocupación!
+							Cambia el mundo con nosotros!
 						</p>
 					</div>
 				</div>

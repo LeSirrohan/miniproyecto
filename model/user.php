@@ -37,10 +37,10 @@ include("../class/conexion.php");
 		public function loginUser(){
 			$conexion = new Conexion();
 			$conex = $conexion->getConexion();
-
-			$result = $conex->query("SELECT email,password, nombre, apellido FROM users WHERE email = '".$this->getEmail()."' AND password = '".$this->getPassword()."'")->fetch(PDO::FETCH_ASSOC);
-			
-			return $result;
+			$consulta = "SELECT email,password, nombre, apellido FROM users WHERE email = '".$this->getEmail()."' AND password = '".$this->getPassword()."'";
+			$result = $conex->query("$consulta")->fetch(PDO::FETCH_ASSOC);
+			$return = ($result['email'] != "") ? $result : 0 ;
+			return $return;
 		}
 		public function registerUser()
 		{
@@ -57,11 +57,11 @@ include("../class/conexion.php");
 			$consul->bindParam(':password',$this->getPassword());
 			try {
 				$consul->execute();
-				return  array('error' => 0);
+				return  1;
 
 			} catch (PDOException $e) {
 				
-				return  array('error' => 1,'mensaje' =>   $e->getMessage());
+				return  0;
 			}
 		}
 	}

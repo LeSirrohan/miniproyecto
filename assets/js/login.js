@@ -90,12 +90,18 @@ var SnippetLogin = function() {
             form.ajaxSubmit({
                 url: '../controller/loginUser.php',
                 success: function(response, status, xhr, $form) {
-                    console.log(response);
-                    // similate 2s delay
-                    location.href='../view/inicio.php';
-                	/*setTimeout(function() {
+                    var resp = JSON.parse(response);
+                    if(resp.error == 0)
+                    {
+                        location.href='../view/inicio.php';
+
+                    }else{
 	                    btn.removeClass('m-loader m-loader--right m-loader--light').attr('disabled', false);
-	                    showErrorMsg(form, 'danger', 'Usuario o contraseña incorrecta. Intenete nuevamente.');
+	                    showErrorMsg(form, 'danger', 'Usuario o contraseña incorrecta. <br>Intente nuevamente.');
+
+                    }
+                    // similate 2s delay
+                	/*setTimeout(function() {
                     }, 2000);*/
                 }
             });
@@ -154,7 +160,7 @@ var SnippetLogin = function() {
 	                    signInForm.clearForm();
 	                    signInForm.validate().resetForm();
 
-	                    showErrorMsg(signInForm, 'success', 'Gracias! Chequea tu email para seguir con el registro.');
+	                    showErrorMsg(signInForm, 'success', 'Gracias! Ingresa los datos de cuenta para ingresar!');
 	                }, 2000);
                 }
             });
